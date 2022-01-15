@@ -3,6 +3,7 @@ import { Link } from "wouter";
 
 import UserContext from "../contexts/userContext";
 
+import './styles/home.sass'
 
 function Home() {
   const user = useContext(UserContext);
