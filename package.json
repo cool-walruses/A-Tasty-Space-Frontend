@@ -1,6 +1,6 @@
 {
-  "name": "glitch-hello-react",
-  "version": "0.0.3",
+  "name": "nwHacks project!",
+  "version": "0.0.0",
   "description": "A simple React single page app, built with Vite and React.",
   "scripts": {
     "start": "vite",
@@ -26,7 +26,7 @@
     "node": "12.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/glitch-hello-react"
+    "url": "https://github.com/lis-b/nwhacks-2022"
   },
   "glitch": {
     "projectType": "generated_static"
