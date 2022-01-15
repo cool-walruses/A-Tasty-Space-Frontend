@@ -6,7 +6,7 @@ import Header from "./components/header.jsx";
 
 import "./styles/style.sass";
 
-export default function Home() {
+export default function App() {
   return (
     <>
       <Header />

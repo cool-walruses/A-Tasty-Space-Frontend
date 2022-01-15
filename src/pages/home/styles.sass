@@ -1,0 +1,71 @@
+@import '../../styles/vars.sass'
+
+div#home
+  background: map-get($colors, two)
+  
+  div.main-page
+    max-width: $page-width
+    text-align: center
+    margin: 0 auto
+    padding: 100px 0
+    
+    h1
+      font-size: 100px
+      margin: 0
+      
+    img
+      max-width: 500px
+      margin: 50px auto
+      display: block
+      
+    a.button-link
+      display: inline-block
+      background: map-get($colors, three)
+      color: map-get($colors, one)
+      line-height: 1em
+      font:
+        size: 50px
+        weight: bold
+      padding: 10px 50px 20px 50px
+      border-radius: $border-radius
+      
+  
+  div.body-objects
+    div.section
+      padding: 100px 0
+      
+      div.section-content
+        max-width: $page-width
+        margin: 0 auto
+        font-size: 50px
+        
+        display: flex
+        justify-content: space-between
+        gap: 100px
+        align-items: center
+        
+        span
+          padding-bottom: 10px
+        
+        h2
+          margin: 0
+        
+        img
+          height: 300px 
+        
+      &::after
+        content: ""
+        clear: both
+        display: table
+        
+      &:nth-child(odd)
+        div.section-content
+          flex-direction: row-reverse
+        
+      &:nth-child(even)
+        background: map-get($colors, three)
+        color: map-get($colors, one)
+        text-align: right
+        
+        div.section-content
+          flex-direction: row

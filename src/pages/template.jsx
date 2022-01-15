@@ -7,9 +7,7 @@ function Template() {
   const user = useContext(UserContext);
 
   return (
-    <>
-      <h1>Template</h1>
-    </>
+      <div id="home" className="page"></div>
   );
 }
 
