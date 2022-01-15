@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Switch, Route, Router } from "wouter";
+import React from "react";
+import { Switch, Route } from "wouter";
 import Home from "../pages/home";
 import About from "../pages/about";
 

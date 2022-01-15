@@ -4,14 +4,14 @@ import { Link } from "wouter";
 import UserContext from "../contexts/userContext";
 
 
-function Home() {
+function Search() {
   const user = useContext(UserContext);
 
   return (
     <>
-      <h1>Home Page</h1>
+      <h1>Search</h1>
     </>
   );
 }
 
-export default Home;
+export default Search;
