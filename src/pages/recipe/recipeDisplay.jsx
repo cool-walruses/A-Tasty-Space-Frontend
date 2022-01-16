@@ -61,17 +61,21 @@ function RecipeDisplay({ recipe }) {
   const handleUpvote = () => {
     if (upvoted) return;
 
-    fetch(`${BACKEND_URL}/api/upvote/recipe/${id}`).then((result) => {
-      if (result.status === 200) setUpvoted(true);
-    });
+    fetch(`${BACKEND_URL}/api/upvote/recipe/${id}`, { method: "POST" }).then(
+      (result) => {
+        if (result.status === 200) setUpvoted(true);
+      }
+    );
   };
 
   const handleDownvote = () => {
     if (upvoted) return;
 
-    fetch(`${BACKEND_URL}/api/downvote/recipe/${id}`).then((result) => {
-      if (result.status === 200) setDownvoted(true);
-    });
+    fetch(`${BACKEND_URL}/api/downvote/recipe/${id}`, { method: "POST" }).then(
+      (result) => {
+        if (result.status === 200) setDownvoted(true);
+      }
+    );
   };
 
   useEffect(() => {
