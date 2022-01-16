@@ -1,7 +1,8 @@
 export const image = {
   apple: "",
-  bacon: "",
+  bacon: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/bacon.png?v=1642346949207",
   beef: "",
+  bread: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/bread.png?v=1642346838372",
   carrot: "",
   celery: "",
   cheese: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/cheese.png?v=1642340583254",
@@ -12,8 +13,9 @@ export const image = {
   noodles: "",
   olives: "",
   potato: "",
-  salmon: "",
-  seaweed: "",
-  tomato: "",
+  rice: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/rice.png?v=1642346945676",
+  salmon: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/salmon.png?v=1642346950399",
+  seaweed: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/seaweed.png?v=1642346947600",
+  tomato: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/tomato.png?v=1642346696646",
 };
 export const placeholderImage = "https://place-hold.it/350x350/F3F0E1/2C3040?text=no image";
