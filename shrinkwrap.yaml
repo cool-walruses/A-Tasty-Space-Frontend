@@ -4,7 +4,7 @@ dependencies:
   react-bootstrap: 2.1.1
   react-dom: 17.0.2
   react-helmet-async: 1.2.2
-  react-masonry-css: 1.0.16
+  react-masonry-component: 6.3.0
   react-spring: 9.4.1
   sass: 1.48.0
   use-clear-params: 0.1.0
@@ -494,6 +494,10 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-P43ePfOAIupkguHUycrc4qJ9kz8ZiuOUijaETwX7THt0Y/GNK7v0aa8rY816xWjZ7rJdA5XdMcpVFTKMq+RvWg==
+  /batch-processor/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-dclcMrdI4IUNEMKxaPa9vpiRrOg=
   /binary-extensions/2.2.0:
     dev: false
     engines:
@@ -575,6 +579,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-+OQdjP49zViI/6i7nIJpA8rAl4sV/JdPfU9nZs3VqOwGIgizICvuN2ru6fMd+4llL0tar18UYJXfZ/TWtmhUjA==
+  /create-react-class/15.7.0:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: false
+    resolution:
+      integrity: sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng==
   /csstype/3.0.10:
     dev: false
     resolution:
@@ -593,6 +604,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==
+  /desandro-matches-selector/2.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-cXvu1NwT59jzdi9wem1YpndCGOE=
   /dom-helpers/5.2.1:
     dependencies:
       '@babel/runtime': 7.16.7
@@ -604,6 +619,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-qagikPjZJSDWP85uWoxs32oK/xk/y3MhDZELfKRCWI7pBc0ZFlmjnXb+3+aNMaiqboeDJJa0v7CJd5cO1HKwEQ==
+  /element-resize-detector/1.2.4:
+    dependencies:
+      batch-processor: 1.0.0
+    dev: false
+    resolution:
+      integrity: sha512-Fl5Ftk6WwXE0wqCgNoseKWndjzZlDCwuPTcoVZfCP9R3EHQF8qUtr3YUPNETegRBOKqQKPW3n4kiIWngGi8tKg==
   /esbuild/0.12.19:
     dev: true
     hasBin: true
@@ -626,6 +647,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
+  /ev-emitter/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-ipiDYhdQSCZ4hSbX4rMW+XzNKMD1prg/sTvoVmSLkuQ1MVlwjJQQA+sW8tMYR3BLUr9KjodFV4pvzunvRhd33Q==
   /fill-range/7.0.1:
     dependencies:
       to-regex-range: 5.0.1
@@ -634,6 +659,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
+  /fizzy-ui-utils/2.0.7:
+    dependencies:
+      desandro-matches-selector: 2.0.2
+    dev: false
+    resolution:
+      integrity: sha512-CZXDVXQ1If3/r8s0T+v+qVeMshhfcuq0rqIFgJnrtd+Bu8GmDmqMjntjUePypVtjHXKJ6V4sw9zeyox34n9aCg==
   /fsevents/2.3.2:
     engines:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
@@ -652,6 +683,10 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
+  /get-size/2.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-lXNzT/h/dTjTxRbm9BXb+SGxxzkm97h/PCIKtlN/CBCxxmkkIVV21udumMS93MuVTDX583gqc94v3RjuHmI+2Q==
   /glob-parent/5.1.2:
     dependencies:
       is-glob: 4.0.3
@@ -680,6 +715,12 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
+  /imagesloaded/4.1.4:
+    dependencies:
+      ev-emitter: 1.1.1
+    dev: false
+    resolution:
+      integrity: sha512-ltiBVcYpc/TYTF5nolkMNsnREHW+ICvfQ3Yla2Sgr71YFwQ86bDwV9hgpFhFtrGPuwEx5+LqOHIrdXBdoWwwsA==
   /immutable/4.0.0:
     dev: false
     resolution:
@@ -747,6 +788,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
+  /lodash/4.17.21:
+    dev: false
+    resolution:
+      integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
   /loose-envify/1.4.0:
     dependencies:
       js-tokens: 4.0.0
@@ -754,6 +799,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  /masonry-layout/4.2.2:
+    dependencies:
+      get-size: 2.0.3
+      outlayer: 2.1.1
+    dev: false
+    resolution:
+      integrity: sha512-iGtAlrpHNyxaR19CvKC3npnEcAwszXoyJiI8ARV2ePi7fmYhIud25MHK8Zx4P0LCC4d3TNO9+rFa1KoK1OEOaA==
   /minimist/1.2.5:
     dev: true
     resolution:
@@ -791,6 +843,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+  /outlayer/2.1.1:
+    dependencies:
+      ev-emitter: 1.1.1
+      fizzy-ui-utils: 2.0.7
+      get-size: 2.0.3
+    dev: false
+    resolution:
+      integrity: sha1-KYY7beEOpdrf/8rfoNcokHOH6aI=
   /path-parse/1.0.7:
     dev: true
     resolution:
@@ -901,12 +961,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-  /react-masonry-css/1.0.16:
+  /react-masonry-component/6.3.0:
+    dependencies:
+      create-react-class: 15.7.0
+      element-resize-detector: 1.2.4
+      imagesloaded: 4.1.4
+      lodash: 4.17.21
+      masonry-layout: 4.2.2
+      prop-types: 15.8.1
     dev: false
     peerDependencies:
-      react: '>=16.0.0'
+      react: ^0.14.0 || ^15.0.0-0 || ^16.0.0-0 || ^17.0.0
     resolution:
-      integrity: sha512-KSW0hR2VQmltt/qAa3eXOctQDyOu7+ZBevtKgpNDSzT7k5LA/0XntNa9z9HKCdz3QlxmJHglTZ18e4sX4V8zZQ==
+      integrity: sha512-4ZI78nxMfCpU5yQiS6Rup07Ju++YzcOGAyvbMcl2GfpZTw8GRwT548lkKr0PJarNicRV1qE2D/NiT26UPg1T7A==
   /react-refresh/0.10.0:
     dev: true
     engines:
@@ -1099,7 +1166,7 @@ specifiers:
   react-bootstrap: ^2.1.1
   react-dom: ^17.0.2
   react-helmet-async: ^1.2.2
-  react-masonry-css: ^1.0.16
+  react-masonry-component: ^6.3.0
   react-spring: ^9.4.1
   sass: ^1.48.0
   use-clear-params: ^0.1.0

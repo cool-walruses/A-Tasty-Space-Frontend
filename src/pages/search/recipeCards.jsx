@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Masonry from "react-masonry-css";
+import Masonry from "react-masonry-component";
 
 import "./recipeCards/styles.sass";
 import Card from "./recipeCards/card";
@@ -23,15 +23,15 @@ function RecipeCards({ recipes, loading, error, constants }) {
     } else if (recipes.length > 0) {
       return (
         <Masonry
-          breakpointCols={3}
-          className="card-masonry"
-          columnClassName="card-masonry_column"
+          className={"card-masonry"}
+          elementType={"div"}
+          options={{ columnWidth: 300, itemSelector: ".card", gutter: 20 }}
         >
-          {[recipes.map((recipe) => getCard(recipe))]}
+          {recipes.map((recipe) => getCard(recipe))}
         </Masonry>
       );
     } else {
-      return <span id="not-found">No results.</span>
+      return <span id="not-found">No results.</span>;
     }
   };
 

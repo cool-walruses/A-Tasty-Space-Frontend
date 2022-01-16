@@ -1,22 +1,11 @@
 @import '../../../styles/vars.scss'
 
-$gutter-size: 20px
-
 div#recipe-cards
   max-width: $page-width
   margin: 0 auto
   
-  div.card-masonry
-    display: flex
-    width: auto
-    margin-left: -$gutter-size
-    
-  div.card-masonry_column
-    padding-left: $gutter-size
-    background-clip: padding-box
-  
   a.card
-    margin-bottom: $gutter-size
+    margin-bottom: 20px
     background: map-get($colors, one)
     border-radius: $border-radius
     display: block
