@@ -5,12 +5,13 @@ import "./recipeCards/styles.sass";
 import Card from "./recipeCards/card";
 
 function RecipeCards({ recipes, loading, error, constants }) {
-  const getCard = (recipe) => {
+  const getCard = (recipe, i) => {
     return (
       <Card
         recipe={recipe}
         timeString={constants.time[recipe.time]}
         difficultyString={constants.difficulty[recipe.difficulty]}
+        key={i}
       />
     );
   };
@@ -32,7 +33,7 @@ function RecipeCards({ recipes, loading, error, constants }) {
             transitionDuration: 0,
           }}
         >
-          {recipes.map((recipe) => getCard(recipe))}
+          {recipes.map((recipe, i) => getCard(recipe, i))}
         </Masonry>
       );
     } else {
