@@ -25,7 +25,12 @@ function RecipeCards({ recipes, loading, error, constants }) {
         <Masonry
           className={"card-masonry"}
           elementType={"div"}
-          options={{ columnWidth: 300, itemSelector: ".card", gutter: 20 }}
+          options={{
+            columnWidth: 300,
+            itemSelector: ".card",
+            gutter: 20,
+            transitionDuration: 0,
+          }}
         >
           {recipes.map((recipe) => getCard(recipe))}
         </Masonry>
