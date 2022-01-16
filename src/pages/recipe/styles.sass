@@ -56,6 +56,9 @@ div#recipe
           align-items: flex-end
           gap: 10px
           
+          div.arrow
+            cursor: point
+          
           div.arrow,
           svg
             height: 45px
@@ -63,15 +66,17 @@ div#recipe
           svg
             padding:
               bottom: 5px
+            color: map-get($colors, three)
               
+            path
+              stroke-width: 4px
+              
+          div.clicked svg
             &.up-svg
               color: map-get($colors, up)
             
             &.down-svg
               color: map-get($colors, down)
-              
-            path
-              stroke-width: 4px
               
           div.down
             padding-left: 70px
