@@ -61,11 +61,12 @@ function RecipeDisplay({ recipe }) {
   const handleUpvote = () => {
     if (upvoted) return;
 
-    fetch(`${BACKEND_URL}/api/upvote/recipe/${id}`, { method: "POST" }).then(
-      (result) => {
-        if (result.status === 200) setUpvoted(true);
-      }
-    );
+    console.log('upvoted');
+    // fetch(`${BACKEND_URL}/api/upvote/recipe/${id}`, { method: "POST" }).then(
+    //   (result) => {
+    //     if (result.status === 200) setUpvoted(true);
+    //   }
+    // );
   };
 
   const handleDownvote = () => {
@@ -98,27 +99,31 @@ function RecipeDisplay({ recipe }) {
               <b>Estimated Time:</b> {constants.time[time]}
             </div>
             <div className="rating">
-              <div>
+              <div className="up">
                 {upvoted
                   ? FORMAT_RATING(rating[0] + 1)
                   : FORMAT_RATING(rating[0])}
               </div>
-              <UpArrow
+              <div
                 role="button"
-                className={`rating up ${upvoted ? "clicked" : ""}`}
+                className={`arrow upvote ${upvoted ? "clicked" : ""}`}
                 onClick={() => handleUpvote()}
-              />
+              >
+                <UpArrow />
+              </div>
 
-              <div>
+              <div className="down">
                 {downvoted
                   ? FORMAT_RATING(rating[1] + 1)
                   : FORMAT_RATING(rating[1])}
               </div>
-              <DownArrow
+              <div
                 role="button"
-                className={`rating down ${downvoted ? "clicked" : ""}`}
+                className={`arrow downvote ${downvoted ? "clicked" : ""}`}
                 onClick={() => handleDownvote()}
-              />
+              >
+                <DownArrow />
+              </div>
             </div>
           </div>
         </div>
