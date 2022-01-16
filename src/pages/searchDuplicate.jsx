@@ -112,7 +112,7 @@ function Discover() {
 
   return (
     <div id="search" className="page">
-      <h1>Discover Recipes</h1>
+      <h1 style={{marginBottom: "30px"}}>Discover Recipes</h1>
       <RecipeCards
         recipes={searchResults}
         loading={searchLoading}
