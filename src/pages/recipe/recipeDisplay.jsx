@@ -15,6 +15,9 @@ function RecipeDisplay({ recipe }) {
     difficulty: [],
     time: [],
   });
+  const [upvoted, setUpvoted] = useState(false);
+  const [downvoted, setDownvoted] = useState(false);
+
   const {
     id,
     name,
@@ -55,6 +58,22 @@ function RecipeDisplay({ recipe }) {
       );
   };
 
+  const handleUpvote = () => {
+    if (upvoted) return;
+
+    fetch(`${BACKEND_URL}/api/upvote/recipe/${id}`).then((result) => {
+      if (result.status === 200) setUpvoted(true);
+    });
+  };
+
+  const handleDownvote = () => {
+    if (upvoted) return;
+
+    fetch(`${BACKEND_URL}/api/downvote/recipe/${id}`).then((result) => {
+      if (result.status === 200) setDownvoted(true);
+    });
+  };
+
   useEffect(() => {
     fetchConstants();
   }, []);
@@ -75,10 +94,26 @@ function RecipeDisplay({ recipe }) {
               <b>Estimated Time:</b> {constants.time[time]}
             </div>
             <div className="rating">
-              <div className="rating up">{FORMAT_RATING(rating[0])}</div>
+              <div
+                role="button"
+                className={`rating up ${upvoted ? "clicked" : ""}`}
+                onClick={() => handleUpvote()}
+              >
+                {upvoted
+                  ? FORMAT_RATING(rating[0] + 1)
+                  : FORMAT_RATING(rating[0])}
+              </div>
               <UpArrow />
 
-              <div className="rating down">{FORMAT_RATING(rating[1])}</div>
+              <div
+                role="button"
+                className={`rating down ${downvoted ? "clicked" : ""}`}
+                onClick={() => handleDownvote()}
+              >
+                {downvoted
+                  ? FORMAT_RATING(rating[1] + 1)
+                  : FORMAT_RATING(rating[1])}
+              </div>
               <DownArrow />
             </div>
           </div>
