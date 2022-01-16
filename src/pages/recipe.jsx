@@ -22,7 +22,7 @@ function Recipe(props) {
   }
 
   const fetchRecipe = () => {
-    fetch(`${BACKEND_URL}/api/recipe/${params.id}`)
+    fetch(`${BACKEND_URL}/recipe/${params.id}`)
       .then((result) => result.json())
       .then(
         (result) => {

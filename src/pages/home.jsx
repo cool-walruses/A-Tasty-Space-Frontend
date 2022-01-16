@@ -17,7 +17,7 @@ function Home() {
         <div className="wrapper">
           <h1>{SITE_NAME}</h1>
 
-          <img src="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ChefCooky.png?v=1642285067376" />
+          <img src="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ChefCooky.png?v=1642357059474" />
 
           <Link href="/search" className="button-link">
             Start Searching
@@ -35,13 +35,13 @@ function Home() {
         <PageSection
           image="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ShareCooky.png?v=1642352031120"
           title="Share."
-          text="Sharing is caring! Upload your own recipes to share with Foodies world wide!"
+          text="Sharing is caring! Upload your own recipes to share with users world wide!"
         />
 
         <PageSection
-          image="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ChefCooky.png?v=1642285067376"
+          image="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ChefCooky.png?v=1642357059474"
           title="Connect."
-          text="i am crying"
+          text="Connect with other fellow culinary adventurists."
         />
       </div>
       

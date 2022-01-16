@@ -48,7 +48,7 @@ function RecipeDisplay({ recipe }) {
   };
 
   const fetchConstants = () => {
-    fetch(`${BACKEND_URL}/api/constants`)
+    fetch(`${BACKEND_URL}/constants`)
       .then((result) => result.json())
       .then(
         (result) => {
@@ -61,7 +61,7 @@ function RecipeDisplay({ recipe }) {
   const handleUpvote = () => {
     if (upvoted || downvoted) return;
 
-    fetch(`${BACKEND_URL}/api/upvote/recipe/${id}`, { method: "POST" }).then(
+    fetch(`${BACKEND_URL}/upvote/recipe/${id}`, { method: "POST" }).then(
       (result) => {
         if (result.status === 200) setUpvoted(true);
       }
@@ -71,7 +71,7 @@ function RecipeDisplay({ recipe }) {
   const handleDownvote = () => {
     if (upvoted || downvoted) return;
 
-    fetch(`${BACKEND_URL}/api/downvote/recipe/${id}`, { method: "POST" }).then(
+    fetch(`${BACKEND_URL}/downvote/recipe/${id}`, { method: "POST" }).then(
       (result) => {
         if (result.status === 200) setDownvoted(true);
       }

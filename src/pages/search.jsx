@@ -59,7 +59,7 @@ function Search() {
   const fetchConstants = () => {
     setFilterLoading(true);
     setFilterError(false);
-    fetch(`${BACKEND_URL}/api/constants`)
+    fetch(`${BACKEND_URL}/constants`)
       .then((result) => result.json())
       .then(
         (result) => {
@@ -82,7 +82,7 @@ function Search() {
       body: JSON.stringify(filters),
     };
 
-    fetch(`${BACKEND_URL}/api/search_view`, requestOptions)
+    fetch(`${BACKEND_URL}/search_view`, requestOptions)
       .then((result) => result.json())
       .then(
         (result) => {

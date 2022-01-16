@@ -7,10 +7,6 @@ import Header from "./components/header.jsx";
 import "./styles/styles.sass";
 
 export default function App() {
-  const [match, params] = useRoute("/api/:call*");
-  
-  if (match) return;
-  
   return (
     <>
       <Header />
