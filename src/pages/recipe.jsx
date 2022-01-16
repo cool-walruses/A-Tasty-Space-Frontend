@@ -1,5 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useRoute, Redirect } from "wouter";
+
+import { BACKEND_URL } from "../constants/site";
 
 import UserContext from "../contexts/userContext";
 
@@ -156,11 +158,34 @@ function Recipe(props) {
 
   const user = useContext(UserContext);
   const [, params] = useRoute("/recipe/:id");
-  let error = null;
+  const [error, setError] = useState(null);
+  const [recipe, setRecipe] = useState(null);
 
   if (!params) {
-    error = 404;
+    setError(404);
   }
+
+  const fetchRecipe = () => {
+    fetch(`${BACKEND_URL}/api/recipe/${params.id}`)
+      .then((result) => {
+        let jsonObject = result.json();
+        console.log(result);
+        console.log(jsonObject);
+        return jsonObject;
+      })
+      .then(
+        (result) => {
+          setRecipe(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  };
+
+  useEffect(() => {
+    fetchRecipe();
+  }, []);
 
   const getBodyContent = () => {
     if (error === 404) {
