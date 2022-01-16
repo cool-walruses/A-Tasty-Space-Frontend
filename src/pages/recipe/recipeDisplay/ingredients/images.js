@@ -3,6 +3,7 @@ export const image = {
   bacon: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/bacon.png?v=1642346949207",
   beef: "",
   bread: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/bread.png?v=1642346838372",
+  butter: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/butter.png?v=1642347051392",
   carrot: "",
   celery: "",
   cheese: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/cheese.png?v=1642340583254",
@@ -11,11 +12,13 @@ export const image = {
   flour: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/flour.png?v=1642340414851",
   lettuce: "",
   noodles: "",
+  "nori seaweed": "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/seaweed.png?v=1642346947600",
   olives: "",
   potato: "",
   rice: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/rice.png?v=1642346945676",
   salmon: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/salmon.png?v=1642346950399",
-  seaweed: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/seaweed.png?v=1642346947600",
+  salt: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/salt.png?v=1642347112565",
+  sugar: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/sugar.png?v=1642347172226",
   tomato: "https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/tomato.png?v=1642346696646",
 };
 export const placeholderImage = "https://place-hold.it/350x350/F3F0E1/2C3040?text=no image";
