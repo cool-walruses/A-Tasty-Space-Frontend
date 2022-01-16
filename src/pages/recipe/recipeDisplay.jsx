@@ -105,7 +105,7 @@ function RecipeDisplay({ recipe }) {
               </div>
               <div
                 role="button"
-                className={`arrow upvote ${upvoted ? "clicked" : ""}`}
+                className={`arrow upvote ${upvoted ? "clicked" : ""}  ${upvoted || downvoted ? "" : "clickable"}`}
                 onClick={() => handleUpvote()}
               >
                 <UpArrow />
@@ -118,7 +118,7 @@ function RecipeDisplay({ recipe }) {
               </div>
               <div
                 role="button"
-                className={`arrow downvote ${downvoted ? "clicked" : ""}`}
+                className={`arrow downvote ${downvoted ? "clicked" : ""}  ${upvoted || downvoted ? "" : "clickable"}`}
                 onClick={() => handleDownvote()}
               >
                 <DownArrow />
