@@ -88,7 +88,7 @@ function Search() {
   };
 
   useEffect(() => {
-    console.log("API fetch call for filter constants");
+    fetchConstants();
   }, []);
 
   useEffect(() => {
