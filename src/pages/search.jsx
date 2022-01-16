@@ -57,19 +57,25 @@ function Search() {
   };
 
   const fetchConstants = () => {
+    setFilterLoading(true);
+    setFilterError(false);
     fetch(`${BACKEND_URL}/api/constants`)
       .then((result) => result.json())
       .then(
         (result) => {
-          setSearchResults(result);
+          setConstants(result);
+          setFilterLoading(false);
         },
         (error) => {
+          setFilterLoading(false);
           setFilterError(true);
         }
       );
   };
 
   const fetchSearchResults = (filters) => {
+    setSearchLoading(true);
+    setSearchError(false);
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -79,10 +85,13 @@ function Search() {
     fetch(`${BACKEND_URL}/api/search_view`, requestOptions)
       .then((result) => result.json())
       .then(
-        (result) => {}, // TODO
+        (result) => {
+          setSearchResults(result);
+          setSearchLoading(false);
+        },
         (error) => {
-          setFilterLoading(false);
-          setFilterError(true);
+          setSearchLoading(false);
+          setSearchError(true);
         }
       );
   };
@@ -97,6 +106,8 @@ function Search() {
       time: filterTime,
       ingredients: filterIngredients,
     };
+    
+    fetchSearchResults(filters);
   }, [filterDifficulty, filterTime, filterIngredients]);
 
   const getFilters = () => {

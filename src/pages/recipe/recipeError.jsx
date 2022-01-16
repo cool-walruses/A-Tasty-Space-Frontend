@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 
 
-function RecipeError(props) {
+function RecipeError({ error }) {
 
   return (
-      <div>Error recipe ID</div>
+      <div>Error recipe code: {error}</div>
   );
 }
 

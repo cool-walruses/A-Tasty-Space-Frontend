@@ -1,17 +1,108 @@
-@import '../../../styles/vars.sass'
+@import '../../styles/vars.scss'
+
 div#recipe
-  
-  div.preview
+  div#recipe-preview
+    width: 100%
+    margin: 0 auto
+    position: relative
+    display: flow-root
+
+    
+    div#recipe-info,
+    div#recipe-picture
+      width: 50%
+    
+    div#recipe-info
+      min-height: $height-minus-header
+      text-align: center
+      padding:
+        top: 200px
+        bottom: 100px
+        right: 100px
+        left: 100px
+      float: left
+      
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      gap: 200px
+      
+      div.text-group
+        flex: 1
+        h1 
+          margin: 0
+          font-size: 50px
+
+        div.desc
+          font-size: 25px
+          margin: 0 auto
+          max-width: 600px
+        
+      div.about-group
+        div.difficulty,
+        div.time
+          font-size: 25px
+        
+        
+        div.rating
+          margin-top: 200px
+          font:
+            size: 40px
+            weight: bold
+          height: 50px
+          
+          display: flex
+          justify-content: center
+          align-items: flex-end
+          gap: 10px
+          
+          svg
+            height: 45px
+            padding:
+              bottom: 5px
+              
+            &.up-svg
+              color: map-get($colors, up)
+            
+            &.down-svg
+              color: map-get($colors, down)
+              
+            path
+              stroke-width: 4px
+              
+          div.down
+            padding-left: 70px
+      
+    div#recipe-picture
+      float: right
+      position: absolute
+      background:
+        size: cover
+        position: center
+      right: 0
+      width: 50%
+      height: 100%
+    
+  div#recipe-ingredients,
+  div#recipe-instructions
+    font-size: 20px
+    
+    h1
+      font-size: 40px
+      margin: 0
+      
+  div#recipe-ingredients
+    background: map-get($colors, one)
+    padding: 100px 0
+    
+    div#ingredients-pane
+      max-width: $page-width
+      margin: 0 auto
+      
+  div#recipe-instructions
     max-width: $page-width
     margin: 0 auto
-    width: 100%
-    height: 100px
-    display: flex
-    flex-direction: row
+    padding: 100px 0
     
-    div.info
-      width: '50%'
-
-    div.picture
-      width: '50%'
-
+    ol
+      li

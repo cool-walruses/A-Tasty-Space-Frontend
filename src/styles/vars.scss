@@ -1,0 +1,17 @@
+$colors: (
+  one: #ffffff, 
+  two: #F3F0E1, 
+  three: #6E3B16, 
+  four: #2C3040, 
+  five: #767676, 
+  six: #D1D1D1, 
+  up: #34C701,
+  down: #D00000
+  );
+
+$page-width: 940px;
+$border-radius: 20px;
+$border-radius-small: calc($border-radius/2);
+$header-height: 95px;
+
+$height-minus-header: calc(100vh - $header-height);
