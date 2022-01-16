@@ -1,13 +1,13 @@
 import React from "react";
 
-function PageSection(props) {
+function PageSection({ image, title, text }) {
   return (
       <div className="section">
           <div className="section-content">
-            <img src={props.image} />
+            <img src={image} />
             <span>
-              <h2>{props.title}</h2>
-              {props.text}
+              <h2>{title}</h2>
+              {text}
             </span>
           </div>
         </div>
