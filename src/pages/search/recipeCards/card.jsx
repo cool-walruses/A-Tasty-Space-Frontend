@@ -7,7 +7,7 @@ import { UpArrow, DownArrow } from "../../../components/svgs";
 function Card({ recipe, difficultyString, timeString }) {
   const { id, name, description, rating, image } = recipe;
   
-  const getImage = () => image ? image : "https://place-hold.it/250x300/6E3B16/FFFFFF?text=no image";
+  const getImage = () => image ? image : "https://place-hold.it/400x300/6E3B16/FFFFFF?text=no image";
   
   return (
     <Link href={`/recipe/${id}`} className="card">
