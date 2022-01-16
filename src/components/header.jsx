@@ -23,9 +23,9 @@ function Header() {
       </div>
       
       <div id="header-links">
-        <Link href="/about">About</Link>
-        <Link href="/">Link</Link>
-        <Link href="/">Link</Link>
+        <Link href="/discover">Discover</Link>
+        <Link href="/link">Browse</Link>
+        <Link href="/search">Search</Link>
         <Link href={`/${loginout.url}`}>{loginout.title}</Link>
       </div>
     </div>

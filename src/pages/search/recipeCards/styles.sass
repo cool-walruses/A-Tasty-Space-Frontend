@@ -1,0 +1,78 @@
+@import '../../../styles/vars.sass'
+
+$gutter-size: 20px
+
+div#recipe-cards
+  max-width: $page-width
+  margin: 0 auto
+  
+  div.card-masonry
+    display: flex
+    width: auto
+    margin-left: -$gutter-size
+    
+  div.card-masonry_column
+    padding-left: $gutter-size
+    background-clip: padding-box
+  
+  a.card
+    margin-bottom: $gutter-size
+    background: map-get($colors, one)
+    border-radius: $border-radius
+    display: block
+    overflow: hidden
+    width: 300px
+    
+    img
+      width: 100%
+      display: block
+      
+    div.text
+      padding: 20px
+      padding-top: 10px
+      
+      div.name 
+        font:
+          size: 30px
+          weight: bold
+        line-height: 1em
+        margin-bottom: 3px
+
+      div.desc
+        font-size: 20px
+        line-height: 1.1em
+        
+      div.misc
+        margin-top: 10px
+        
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        
+        
+        div.left
+          font:
+            size: 25px
+            weight: bold
+          line-height: 1em
+            
+          display: flex
+          justify-content: flex-start
+          align-items: flex-end
+          gap: 2px
+          
+          svg
+            height: 21px
+            padding:
+              bottom: 2px
+              
+          div.down
+            padding-left: 10px
+          
+            
+        div.right
+          text-align: right
+          line-height: 1em
+          
+          div.difficulty
+            font-weight: bold

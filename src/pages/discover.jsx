@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 
 import UserContext from "../contexts/userContext";
+import RecipeCards from "./search/recipeCards";
 
 
 function Template() {

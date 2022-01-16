@@ -16,25 +16,32 @@ html
   -webkit-box-sizing: inherit
 
 html,
-body
+body,
+div#root
   height: 100%
   width: 100%
   margin: 0
   position: absolute
+  
+    
+body
+  background: map-get($colors, two)
   color: map-get($colors, four)
   font:
     family: dinosaur
-    
+  
 a
   text-decoration: none
   color: inherit
   
 div#header
+  background: map-get($colors, one)
   width: 100%
-  padding: 20px
+  padding: 20px 40px
   font:
     size: 40px
     weight: bold
+  z-index: 9999
     
   display: flex
   justify-content: space-between
@@ -47,4 +54,4 @@ div#header
     
     a
       display: inline-block
-      margin: 0 20px
+      margin-left: 30px

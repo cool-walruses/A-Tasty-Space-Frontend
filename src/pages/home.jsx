@@ -14,11 +14,15 @@ function Home() {
   return (
     <div id="home" className="page">
       <div className="main-page">
-        <h1>{SITE_NAME}</h1>
-        
-        <img src="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ChefCooky.png?v=1642285067376" />
+        <div class="wrapper">
+          <h1>{SITE_NAME}</h1>
 
-        <Link href="/explore" class="button-link">Explore</Link>
+          <img src="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ChefCooky.png?v=1642285067376" />
+
+          <Link href="/explore" class="button-link">
+            Explore
+          </Link>
+        </div>
       </div>
 
       <div class="body-objects">
@@ -30,7 +34,7 @@ function Home() {
 
         <PageSection
           image="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ChefCooky.png?v=1642285067376"
-          title="Share."
+          title="Cook."
           text="Find recipes based on ingredients, difficulty, meal time, and many more options!"
         />
 

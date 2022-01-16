@@ -1,17 +1,27 @@
 @import '../../styles/vars.sass'
 
 div#home
-  background: map-get($colors, two)
   
   div.main-page
     max-width: $page-width
     text-align: center
     margin: 0 auto
-    padding: 100px 0
+    padding:
+      top: 40px
+      bottom: 60px
+    min-height: $height-minus-header
+    
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    div.wrapper
+      flex: none
     
     h1
       font-size: 100px
       margin: 0
+      line-height: 1em
       
     img
       max-width: 500px
@@ -41,7 +51,6 @@ div#home
         
         display: flex
         justify-content: space-between
-        gap: 100px
         align-items: center
         
         span
@@ -51,7 +60,7 @@ div#home
           margin: 0
         
         img
-          height: 300px 
+          width: 400px 
         
       &::after
         content: ""
@@ -59,12 +68,13 @@ div#home
         display: table
         
       &:nth-child(odd)
+        background: map-get($colors, three)
+        color: map-get($colors, one)
+        
         div.section-content
           flex-direction: row-reverse
         
       &:nth-child(even)
-        background: map-get($colors, three)
-        color: map-get($colors, one)
         text-align: right
         
         div.section-content
