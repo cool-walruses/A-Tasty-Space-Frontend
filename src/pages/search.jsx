@@ -1,5 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 
+import { BACKEND_URL } from "../constants/site";
+
 import UserContext from "../contexts/userContext";
 
 import SearchFilter from "./search/searchFilter";
@@ -9,6 +11,9 @@ import "./search/styles.sass";
 
 function Search() {
   const user = useContext(UserContext);
+
+  const [filterLoading, setFilterLoading] = useState(false);
+  const [filterError, setFilterError] = useState(false);
 
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchError, setSearchError] = useState(false);
@@ -51,40 +56,94 @@ function Search() {
     }
   };
 
+  const fetchConstants = () => {
+    fetch(`${BACKEND_URL}/api/constants`)
+      .then((result) => result.json())
+      .then(
+        (result) => {
+          setSearchResults(result);
+        },
+        (error) => {
+          setFilterError(true);
+        }
+      );
+  };
+
+  const fetchSearchResults = (filters) => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(filters),
+    };
+
+    fetch(`${BACKEND_URL}/api/search_view`, requestOptions)
+      .then((result) => result.json())
+      .then(
+        (result) => {}, // TODO
+        (error) => {
+          setFilterLoading(false);
+          setFilterError(true);
+        }
+      );
+  };
+
   useEffect(() => {
     console.log("API fetch call for filter constants");
   }, []);
 
   useEffect(() => {
-    console.log("API fetch call for search");
-  }, [filterIngredients, filterTime, filterDifficulty]);
+    const filters = {
+      difficulty: filterDifficulty,
+      time: filterTime,
+      ingredients: filterIngredients,
+    };
+  }, [filterDifficulty, filterTime, filterIngredients]);
+
+  const getFilters = () => {
+    if (filterLoading) {
+      return;
+    } else if (filterError) {
+      return (
+        <div className="error">
+          Error loading filters! Please refresh the page.
+        </div>
+      );
+    } else {
+      return (
+        <>
+          <h2>Difficulty</h2>
+          <SearchFilter
+            className="difficulty"
+            list={constants.difficulty}
+            selected={filterDifficulty}
+            handleChange={handleDifficulty}
+          />
+
+          <h2>Time</h2>
+          <SearchFilter
+            className="time"
+            list={constants.time}
+            selected={filterTime}
+            handleChange={handleTime}
+          />
+
+          <h2>Ingredients</h2>
+          <SearchFilter
+            className="ingredients"
+            multiselect
+            list={constants.ingredients}
+            selected={filterIngredients}
+            handleChange={handleIngredient}
+          />
+        </>
+      );
+    }
+  };
 
   return (
     <div id="search" className="page">
-      <div id="search-filters">
-        <SearchFilter
-          className="difficulty"
-          list={constants.difficulty}
-          selected={filterDifficulty}
-          handleChange={handleDifficulty}
-        />
-
-        <SearchFilter
-          className="time"
-          list={constants.time}
-          selected={filterTime}
-          handleChange={handleTime}
-        />
-
-        <SearchFilter
-          className="ingredients"
-          multiselect
-          list={constants.ingredients}
-          selected={filterIngredients}
-          handleChange={handleIngredient}
-        />
-      </div>
-
+      <h1>Search Recipes</h1>
+      <div id="search-filters">{getFilters()}</div>
       <RecipeCards
         recipes={searchResults}
         loading={searchLoading}

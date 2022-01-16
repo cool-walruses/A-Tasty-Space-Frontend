@@ -1,9 +1,52 @@
 @import '../../styles/vars.sass'
 
 div#search
+  h1
+    margin: 0
+    padding-top: 40px
+    font-size: 60px
+    text-align: center
+  
   div#search-filters
     max-width: $page-width
     margin: 0 auto
-  
-  button.selected
-    background: red
+    padding: 50px 0
+    
+    div.error
+      text-align: center
+      font-size: 20px
+      
+    h2
+      line-height: 1em
+      margin:
+        top: 20px
+        bottom: 10px
+        
+      &:first-child
+        margin-top: 0
+
+    .filter-section
+      &:last-child
+        margin-bottom: 20px
+      
+    button
+      display: inline-block
+      margin-right: 15px
+      font-size: 20px
+      line-height: 1em
+      border: none
+      padding: 13px
+      padding:
+        top: 5px
+        bottom: 10px
+      background: map-get($colors, one)
+      border-radius: $border-radius-small
+      cursor: pointer
+      
+      &.selected
+        background: map-get($colors, three)
+        color: map-get($colors, one)
+        
+  div#recipe-cards
+    span
+      font-size: 20px

@@ -37,7 +37,7 @@ function SearchFilter({
     }
   };
 
-  return <div className={className}>{getFilters()}</div>;
+  return <div className={`${className} filter-section`}>{getFilters()}</div>;
 }
 
 export default SearchFilter;
