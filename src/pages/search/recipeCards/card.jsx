@@ -3,11 +3,12 @@ import { Link } from "wouter";
 import { FORMAT_RATING } from '../../../constants/format';
 
 import { UpArrow, DownArrow } from "../../../components/svgs";
+import { RecipeImages } from "../../../components/recipeImages";
 
 function Card({ recipe, difficultyString, timeString }) {
-  const { id, name, description, rating, image } = recipe;
+  const { id, name, description, rating } = recipe;
   
-  const getImage = () => image ? image : "https://place-hold.it/300x300/6E3B16/FFFFFF?text=no image";
+  const getImage = () => RecipeImages[id] ? RecipeImages[id] : "https://place-hold.it/300x300/6E3B16/FFFFFF?text=no image";
   
   return (
     <Link href={`/recipe/${id}`} className="card">
