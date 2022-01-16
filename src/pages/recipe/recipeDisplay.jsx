@@ -59,18 +59,17 @@ function RecipeDisplay({ recipe }) {
   };
 
   const handleUpvote = () => {
-    if (upvoted) return;
+    if (upvoted || downvoted) return;
 
-    console.log('upvoted');
-    // fetch(`${BACKEND_URL}/api/upvote/recipe/${id}`, { method: "POST" }).then(
-    //   (result) => {
-    //     if (result.status === 200) setUpvoted(true);
-    //   }
-    // );
+    fetch(`${BACKEND_URL}/api/upvote/recipe/${id}`, { method: "POST" }).then(
+      (result) => {
+        if (result.status === 200) setUpvoted(true);
+      }
+    );
   };
 
   const handleDownvote = () => {
-    if (upvoted) return;
+    if (upvoted || downvoted) return;
 
     fetch(`${BACKEND_URL}/api/downvote/recipe/${id}`, { method: "POST" }).then(
       (result) => {
