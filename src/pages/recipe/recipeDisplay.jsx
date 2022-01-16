@@ -98,27 +98,27 @@ function RecipeDisplay({ recipe }) {
               <b>Estimated Time:</b> {constants.time[time]}
             </div>
             <div className="rating">
-              <div
-                role="button"
-                className={`rating up ${upvoted ? "clicked" : ""}`}
-                onClick={() => handleUpvote()}
-              >
+              <div>
                 {upvoted
                   ? FORMAT_RATING(rating[0] + 1)
                   : FORMAT_RATING(rating[0])}
               </div>
-              <UpArrow />
-
-              <div
+              <UpArrow
                 role="button"
-                className={`rating down ${downvoted ? "clicked" : ""}`}
-                onClick={() => handleDownvote()}
-              >
+                className={`rating up ${upvoted ? "clicked" : ""}`}
+                onClick={() => handleUpvote()}
+              />
+
+              <div>
                 {downvoted
                   ? FORMAT_RATING(rating[1] + 1)
                   : FORMAT_RATING(rating[1])}
               </div>
-              <DownArrow />
+              <DownArrow
+                role="button"
+                className={`rating down ${downvoted ? "clicked" : ""}`}
+                onClick={() => handleDownvote()}
+              />
             </div>
           </div>
         </div>
