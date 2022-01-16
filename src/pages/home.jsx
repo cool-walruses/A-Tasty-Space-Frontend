@@ -41,7 +41,7 @@ function Home() {
         <PageSection
           image="https://cdn.glitch.global/d94bd104-e04e-4362-8c25-9302f465398d/ChefCooky.png?v=1642357059474"
           title="Connect."
-          text="Connect with other fellow culinary adventurists."
+          text="Connect with other fellow culinary adventurists by sharing recipes and commenting on other recipes!"
         />
       </div>
       
