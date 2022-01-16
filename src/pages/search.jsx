@@ -20,9 +20,9 @@ function Search() {
   const [searchResults, setSearchResults] = useState([]);
 
   const [constants, setConstants] = useState({
-    ingredients: ["one", "two", "three"],
-    time: ["<1 hour", "1-2 hours", "2-3 hours", ">3 hours"],
     difficulty: ["beginner", "intermediate", "advanced"],
+    time: ["<1 hour", "1-2 hours", "2-3 hours", ">3 hours"],
+    ingredients: ["one", "two", "three"],
   });
   const [filterDifficulty, setFilterDifficulty] = useState(null);
   const [filterTime, setFilterTime] = useState(null);
@@ -106,7 +106,7 @@ function Search() {
       time: filterTime,
       ingredients: filterIngredients,
     };
-    
+
     fetchSearchResults(filters);
   }, [filterDifficulty, filterTime, filterIngredients]);
 

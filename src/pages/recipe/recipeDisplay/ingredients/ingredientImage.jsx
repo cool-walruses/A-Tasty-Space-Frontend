@@ -1,0 +1,19 @@
+import React from "react";
+
+import { image, placeholderImage } from "./images";
+
+function IngredientImage({ item }) {
+  const { ingredient, quantity } = item;
+  
+  const ingredientImage = image[ingredient] ? image[ingredient] : placeholderImage;
+  
+  return (
+    <div className="ingredient-image">
+      <img src={ingredientImage} />
+      <span className="name">{ingredient}</span>
+      <span className="quantity">{quantity}</span>
+    </div>
+  );
+}
+
+export default IngredientImage;

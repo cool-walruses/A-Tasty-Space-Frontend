@@ -11,8 +11,8 @@ import Ingredients from "./recipeDisplay/ingredients";
 function RecipeDisplay({ recipe }) {
   const user = useContext(UserContext);
   const [constants, setConstants] = useState({
-    difficulty: [],
-    time: [],
+    difficulty: ["beginner", "intermediate", "advanced"],
+    time: ["<1 hour", "1-2 hours", "2-3 hours", ">3 hours"],
   });
   const {
     id,
@@ -26,13 +26,13 @@ function RecipeDisplay({ recipe }) {
     image,
   } = recipe;
 
-  const getImage = () => (image ? image : "https://place-hold.it/2000x2000");
+  const getImage = () => (image ? image : "https://place-hold.it/1000x1000/6E3B16/FFFFFF?text=no image");
 
   const getInstructions = () => {
     return (
       <ol>
         {steps.map((step, i) => (
-          <li key={i}>{step}</li>
+          <li key={i}><span>{step}</span></li>
         ))}
       </ol>
     );
