@@ -3,6 +3,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { FORMAT_RATING } from "../../constants/format";
 import { BACKEND_URL } from "../../constants/site";
 import { UpArrow, DownArrow } from "../../components/svgs";
+import { RecipeImages } from "../../components/recipeImages";
 
 import UserContext from "../../contexts/userContext";
 
@@ -22,11 +23,10 @@ function RecipeDisplay({ recipe }) {
     description,
     ingredients,
     steps,
-    rating,
-    image,
+    rating
   } = recipe;
 
-  const getImage = () => (image ? image : "https://place-hold.it/1000x1000/6E3B16/FFFFFF?text=no image");
+  const getImage = () => (RecipeImages[id] ? RecipeImages[id] : "https://place-hold.it/1000x1000/6E3B16/FFFFFF?text=no image");
 
   const getInstructions = () => {
     return (
