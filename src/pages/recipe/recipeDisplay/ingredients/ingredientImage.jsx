@@ -9,7 +9,7 @@ function IngredientImage({ item }) {
   
   return (
     <div className="ingredient-image">
-      <img src={ingredientImage} />
+      <div><img src={ingredientImage} /></div>
       <span className="name">{ingredient}</span>
       <span className="quantity">{quantity}</span>
     </div>
